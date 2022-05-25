@@ -1,4 +1,5 @@
 import { HiMenuAlt3 } from "react-icons/Hi";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -9,10 +10,14 @@ const Navbar = () => {
             <div className="col-lg-5 col-0 pe-0  d-flex justify-content-center flex-column">
               <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center justify-content-end list-unstyled">
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">HOME</a>
+                  <Link href="/">
+                    <a>HOME</a>
+                  </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">PORTFOLIO</a>
+                  <Link href="/portfolio">
+                    <a>PORTFOLIO</a>
+                  </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <a href="">FEATURES</a>
@@ -22,7 +27,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-2 col-2 px-0  d-flex justify-content-start">
+            <div className="col-lg-2 col-2 px-0 pe-2  d-flex justify-content-start">
               <img
                 className="w-100 "
                 src="/Logo.png"

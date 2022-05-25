@@ -1,8 +1,15 @@
+import Hero from "../components/Hero";
 const Home = () => {
   return (
-    <div>
-      <h1 className="text-center my-5">Home</h1>
-    </div>
+    <>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col">
+            <Hero></Hero>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 export default Home;
