@@ -1,0 +1,21 @@
+
+/* footer  */
+#footer   p {
+    color: #707070 !important;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+#footer   a {
+     text-decoration: none;
+    color: #707070 !important;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+.social_footer_icons{
+  font-size: 25px;
+  color: #707070;
+  text-shadow: 0 0;
+  direction: ltr;
+}

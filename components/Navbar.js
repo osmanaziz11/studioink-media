@@ -1,11 +1,12 @@
 import { HiMenuAlt3 } from "react-icons/Hi";
 import Link from "next/link";
+import style from "../styles/navbar.module.css";
 
 const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="container-fluid" id="navbar">
+        <div className="container-fluid" id={style.navbar}>
           <div className="row px-xl-5 py-5 px-3">
             <div className="col-lg-5 col-0 pe-0  d-flex justify-content-center flex-column">
               <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center justify-content-end list-unstyled">

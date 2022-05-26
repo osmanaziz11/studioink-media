@@ -2,11 +2,12 @@ import { FaFacebookF } from "react-icons/Fa";
 import { AiFillInstagram } from "react-icons/Ai";
 import { AiFillYoutube } from "react-icons/Ai";
 import { IoLogoWhatsapp } from "react-icons/Io";
+import style from "../styles/footer.module.css";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="container-fluid " id="footer">
+      <div className="container-fluid " id={style.footer}>
         <div className="row my-4">
           <div className="col d-flex justify-content-center">
             <img
@@ -19,7 +20,7 @@ const Footer = () => {
         </div>
         <div className="row mt-4">
           <div className="col d-flex justify-content-center">
-            <p className="text-center">
+            <p className={`text-center `}>
               <a href="">Services</a> / <a href="">Portfolio</a> /{" "}
               <a href="">About</a> / <a href="">Contact</a>
             </p>
@@ -28,10 +29,12 @@ const Footer = () => {
         <div className="row my-3">
           <div className="col">
             <p className="text-center">
-              <FaFacebookF className="social_footer_icons mx-3" />
-              <AiFillInstagram className="social_footer_icons mx-3" />
-              <AiFillYoutube className="social_footer_icons mx-3" />
-              <IoLogoWhatsapp className="social_footer_icons mx-3" />
+              <FaFacebookF className={`${style.social_footer_icons} mx-3`} />
+              <AiFillInstagram
+                className={`${style.social_footer_icons} mx-3`}
+              />
+              <AiFillYoutube className={`${style.social_footer_icons} mx-3`} />
+              <IoLogoWhatsapp className={`${style.social_footer_icons} mx-3`} />
             </p>
           </div>
         </div>
