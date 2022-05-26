@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "../styles/Hero.module.css";
 const Hero = () => {
   const [curr, setCurr] = useState(1);
   const nextSlide = (e) => {
-    setCurr(e.target["__reactProps$beulwqzkll9"].data_id);
+    console.log();
+    setCurr(e.target.attributes["1"].value);
   };
-  const abc = () => {
-    console.log(`first`);
-  };
+  let count;
+  setInterval(() => {
+    if (curr >= 3) {
+      setCurr(1);
+    } else {
+      count = curr;
+      count++;
+      setCurr(count);
+    }
+  }, 10000);
+
   return (
     <div
       className="container shadow p-0 position-relative"
@@ -18,36 +27,60 @@ const Hero = () => {
         <li className="text-center" data_id="1" onClick={nextSlide}>
           1
         </li>
-        <li className="text-center">|</li>
+        <li
+          className={`text-center ${style.navigator_bar} ${
+            curr == 1 ? "" : style.navigator_bar_active
+          }`}
+        >
+          |
+        </li>
         <li className="text-center" data_id="2" onClick={nextSlide}>
           2
         </li>
-        {/* <li className="text-center">|</li> */}
+        <li
+          className={`text-center ${style.navigator_bar} ${
+            curr == 2 ? "" : style.navigator_bar_active
+          }`}
+        >
+          |
+        </li>
         <li className="text-center" data_id="3" onClick={nextSlide}>
           3
+        </li>
+        <li
+          className={`text-center ${style.navigator_bar} ${
+            curr == 3 ? "" : style.navigator_bar_active
+          }`}
+        >
+          |
         </li>
       </ul>
       {/* slider 1  */}
       <div
         id="slide1"
-        className={`${style.__slider} w-100 h-100  ${
+        className={`${style.__slider} w-100 h-100 position-absolute top-0 ${
           curr == 1 ? style.active_slide : ""
         }`}
       >
+        {/* Gradient Effect  */}
         <div
           className={`w-100 h-100 position-absolute top-0 ${style.img_gradient}`}
         ></div>
+        {/* Image  */}
         <img src="/slide_1.jpg" alt="" className="w-100 h-100 top-0" />
-        <h1 className={`position-absolute mx-5 ${style.haa}`}>
-          Wedding Photography
-        </h1>
-        <p className="position-absolute mx-5 px-2" data-aos="fade-up">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut,
-          repellat.
-        </p>
-        <button className="position-absolute mx-5" onClick={abc}>
-          Learn More
-        </button>
+        {/* Description */}
+        <div
+          className={`${style.desc_container} ${
+            curr == 1 ? style.desc_anim : ""
+          } position-absolute mx-5`}
+        >
+          <h1 className="">Wedding Photogrpahy</h1>
+          <p className=" px-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut,
+            repellat.
+          </p>
+          <button className="p-2 mx-2">Learn More</button>
+        </div>
       </div>
       {/* slide 2 */}
       <div
@@ -56,16 +89,25 @@ const Hero = () => {
           curr == 2 ? style.active_slide : ""
         }`}
       >
+        {/* Gradient Effect  */}
         <div
           className={`w-100 h-100 position-absolute top-0 ${style.img_gradient}`}
         ></div>
+        {/* Image  */}
         <img src="/slide_2.jpg" alt="" className="w-100 h-100 top-0" />
-        <h1 className="position-absolute mx-5">Night-Life Photogrpahy</h1>
-        <p className="position-absolute mx-5 px-2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut,
-          repellat.
-        </p>
-        <button className="position-absolute mx-5">Learn More</button>
+        {/* Description */}
+        <div
+          className={`${style.desc_container} ${
+            curr == 2 ? style.desc_anim : ""
+          } position-absolute mx-5`}
+        >
+          <h1 className="">Night-Life Photogrpahy</h1>
+          <p className=" px-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut,
+            repellat.
+          </p>
+          <button className="p-2 mx-2">Learn More</button>
+        </div>
       </div>
       {/* slide 3  */}
       <div
@@ -74,16 +116,25 @@ const Hero = () => {
           curr == 3 ? style.active_slide : ""
         }`}
       >
+        {/* Gradient Effect  */}
         <div
           className={`w-100 h-100 position-absolute top-0 ${style.img_gradient}`}
         ></div>
+        {/* Image  */}
         <img src="/black__bg.jpg" alt="" className="w-100 h-100 top-0" />
-        <h1 className="position-absolute mx-5">Engagement Shoots</h1>
-        <p className="position-absolute mx-5 px-2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut,
-          repellat.
-        </p>
-        <button className="position-absolute mx-5">Learn More</button>
+        {/* Description */}
+        <div
+          className={`${style.desc_container} ${
+            curr == 3 ? style.desc_anim : ""
+          } position-absolute mx-5`}
+        >
+          <h1 className="">Engagement-Life Photogrpahy</h1>
+          <p className=" px-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut,
+            repellat.
+          </p>
+          <button className="p-2 mx-2">Learn More</button>
+        </div>
       </div>
     </div>
   );
