@@ -6,16 +6,16 @@ const Hero = () => {
     console.log();
     setCurr(e.target.attributes["1"].value);
   };
-  let count;
-  setInterval(() => {
-    if (curr >= 3) {
-      setCurr(1);
-    } else {
-      count = curr;
-      count++;
-      setCurr(count);
-    }
-  }, 10000);
+  // let count;
+  // setInterval(() => {
+  //   if (curr >= 3) {
+  //     setCurr(1);
+  //   } else {
+  //     count = curr;
+  //     count++;
+  //     setCurr(count);
+  //   }
+  // }, 10000);
 
   return (
     <div
