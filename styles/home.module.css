@@ -93,3 +93,36 @@
 }
 
 }
+
+/* Portfolio   */
+.portfolio h1{
+    font-family: var(--primary-font);
+}
+.portfolio_container .boxes{
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.portfolio_container::-webkit-scrollbar{
+    display: none;
+}
+.portfolio_effect{
+background-color: #202020;
+transition: all 0.5s;
+opacity: 0;
+
+}
+.boxes img{
+    object-fit: cover;
+   
+}
+.portfolio_effect:hover{
+    opacity: 1;
+}
+.portfolio_effect{
+    font-family: var(--primary-font);
+    color: white;
+    letter-spacing: 2px;
+}

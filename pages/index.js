@@ -47,6 +47,153 @@ const Home = () => {
             <p className="text-sm-start text-center">MORE ABOUT ME</p>
           </div>
         </div>
+        {/* Portfolio Section  */}
+        <div className={`container-fluid ${styles.portfolio}`}>
+          <div className="row">
+            <div className="col">
+              <div
+                className={`mx-4 d-flex align-items-center w-100 ${styles.top_heading_container}`}
+              >
+                <div className="d-inline-block"></div>
+                <h6 className="d-inline-block mt-1 mx-3">MY WORK</h6>
+              </div>
+              <h1 className="my-3 mx-4">Portfolio</h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`container-fluid my-4 overflow-scroll ${styles.portfolio_container}`}
+        >
+          <ul className="d-flex list-unstyled m-1">
+            <li data-aos="zoom-in">
+              <div className={`shadow mx-3 ${styles.boxes} position-relative`}>
+                <img
+                  src="/p2.jpg"
+                  alt=""
+                  className="position-absolute top-0 w-100 h-100"
+                />
+                <div
+                  className={`${styles.portfolio_effect} position-relative w-100 d-flex flex-column justify-content-between h-100 top-0 p-5`}
+                >
+                  <p className="text-center">Feburary 2022</p>
+                  <span>
+                    <h4 className="text-center mt-5">Saira Waseem</h4>
+                    <h5 className="text-center ">View Project</h5>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div className={`shadow mx-3 ${styles.boxes} position-relative`}>
+                <img
+                  src="/p2.jpg"
+                  alt=""
+                  className="position-absolute top-0 w-100 h-100"
+                />
+                <div
+                  className={`${styles.portfolio_effect} position-relative w-100 d-flex flex-column justify-content-between h-100 top-0 p-5`}
+                >
+                  <p className="text-center">Feburary 2022</p>
+                  <span>
+                    <h4 className="text-center mt-5">Saira Waseem</h4>
+                    <h5 className="text-center ">View Project</h5>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div className={`shadow mx-3 ${styles.boxes} position-relative`}>
+                <img
+                  src="/p2.jpg"
+                  alt=""
+                  className="position-absolute top-0 w-100 h-100"
+                />
+                <div
+                  className={`${styles.portfolio_effect} position-relative w-100 d-flex flex-column justify-content-between h-100 top-0 p-5`}
+                >
+                  <p className="text-center">Feburary 2022</p>
+                  <span>
+                    <h4 className="text-center mt-5">Saira Waseem</h4>
+                    <h5 className="text-center ">View Project</h5>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div className={`shadow mx-3 ${styles.boxes} position-relative`}>
+                <img
+                  src="/p2.jpg"
+                  alt=""
+                  className="position-absolute top-0 w-100 h-100"
+                />
+                <div
+                  className={`${styles.portfolio_effect} position-relative w-100 d-flex flex-column justify-content-between h-100 top-0 p-5`}
+                >
+                  <p className="text-center">Feburary 2022</p>
+                  <span>
+                    <h4 className="text-center mt-5">Saira Waseem</h4>
+                    <h5 className="text-center ">View Project</h5>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div className={`shadow mx-3 ${styles.boxes} position-relative`}>
+                <img
+                  src="/p2.jpg"
+                  alt=""
+                  className="position-absolute top-0 w-100 h-100"
+                />
+                <div
+                  className={`${styles.portfolio_effect} position-relative w-100 d-flex flex-column justify-content-between h-100 top-0 p-5`}
+                >
+                  <p className="text-center">Feburary 2022</p>
+                  <span>
+                    <h4 className="text-center mt-5">Saira Waseem</h4>
+                    <h5 className="text-center ">View Project</h5>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li data-aos="zoom-in">
+              <div className={`shadow mx-3 ${styles.boxes} position-relative`}>
+                <img
+                  src="/p2.jpg"
+                  alt=""
+                  className="position-absolute top-0 w-100 h-100"
+                />
+                <div
+                  className={`${styles.portfolio_effect} position-relative w-100 d-flex flex-column justify-content-between h-100 top-0 p-5`}
+                >
+                  <p className="text-center">Feburary 2022</p>
+                  <span>
+                    <h4 className="text-center mt-5">Saira Waseem</h4>
+                    <h5 className="text-center ">View Project</h5>
+                  </span>
+                </div>
+              </div>
+            </li>
+
+            <li data-aos="zoom-in">
+              <div className={`shadow mx-3 ${styles.boxes} position-relative`}>
+                <img
+                  src="/p1.jpg"
+                  alt=""
+                  className="position-absolute top-0 w-100 h-100"
+                />
+                <div
+                  className={`${styles.portfolio_effect} position-relative w-100 d-flex flex-column justify-content-between h-100 top-0 p-5`}
+                >
+                  <p className="text-center">Feburary 2022</p>
+                  <span>
+                    <h4 className="text-center mt-5">Saira Waseem</h4>
+                    <h5 className="text-center ">View Project</h5>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
