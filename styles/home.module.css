@@ -1,56 +1,6 @@
-/* About Section  */
-.vertical_img{
-      
-    width: 400px;
-    z-index: 1;
-}
-.horizontal_img{
-    bottom: 0;
-    width: 403px;
-    height: 270px;
-}
-.about_section img{
-    position: absolute;
-}
-.about_section > div{
-    height: 500px;
-}
-.top_heading_container > div{
-    width: 60px;
-    height: 1px;
-    background-color: var(--primary-heading-color);
-}
-.top_heading_container h6{
-  font-family: 'Roboto, Helvetica, Arial, Lucida, sans-serif;';
-  color: #707070;
-  letter-spacing: 2px;
-  font-weight: 400;
-  font-size: 13px;
-}
-.about_desc h1{
-    font-size: 30px;
-    font-family: var(--primary-font);
-    font-weight: 500;
-    line-height: 42px;
-    border-bottom: 1px solid var(--primary-heading-color);
-}
-.abut_desc p{
-  font-family: 'Roboto, Helvetica, Arial, Lucida, sans-serif;';
-  color: #707070;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 16px;
-}
-
 /* Media Queries  */
 @media screen and (max-width: 990px) {
- .vertical_img{
-    width: 400px;
-    z-index: 1;
-}
-.about_desc h1{
-    font-size: 28px;
-}
+
 .services0 .desc_side{
     border: none !important;
     border-top: 1px solid var(--primary-heading-color) 
@@ -61,25 +11,11 @@
     border: none !important;
     border-bottom: 1px solid var(--primary-heading-color) 
     !important;
-  
 }
 }
-@media screen and (max-width: 767px) {
- .about_section img{
-    position: relative !important;
-}
-.about_section > div{
-    height: auto !important;
-}
-}
+
 @media screen and (max-width: 470px) {
- .vertical_img{
-    width: 90%;
-    z-index: 1;
-}
-.about_section > div{
-    height: 450px;
-}
+
 .services0 .img_side div{
     width: 90% !important;
     height: auto !important;
@@ -89,42 +25,44 @@
     height: auto !important;
 }
 }
-@media screen and (max-width: 325px) {
- 
-.about_desc p{
-    font-size: 13px !important;
-}
-}
-@media screen and (max-width: 325px) {
- 
-.about_desc h1{
-    font-size: 24px;
-}
-.about_desc p{
-    font-size: 14px !important;
-}
-}
-@media screen and (min-width: 768px) {
- .vertical_img{
-        right: 8%;
-    width: 400px;
-    z-index: 1;
-}
-
-}
-
 /* Portfolio   */
 .portfolio h1{
     font-family: var(--primary-font);
 }
+.portfolio_container{
+    position: relative;
+}
+.portfolio_container:hover .left_nav{
+    left: 3% !important;
+}
+.portfolio_container:hover .right_nav{
+    right: 3% !important;
+}
+.navigator_icons{
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: rgb(255, 255, 255) !important;
+}
+.left_nav{
+left: -33%;
+}
+.right_nav{
+ right: -33%;
+}
 .portfolio_container .boxes{
-    height: 400px;
+    height: 350px;
     width: 300px;
     display: inline-block;
     transition: all 0.5s;
     cursor: pointer;
 }
-.portfolio_container::-webkit-scrollbar{
+.portfolio_container ul{
+    scroll-behavior: smooth;
+}
+.portfolio_container ul::-webkit-scrollbar{
     display: none;
 }
 .portfolio_effect{
@@ -199,23 +137,4 @@ opacity: 0;
 .img_side div:nth-child(2){
    background-color: #100E0E;
    width: 400px;
-}
-.insta_feed .ending_bar{
-    border-bottom: 1px solid var(--primary-heading-color);
-    width: 80%;
-}
-.insta_feed button{
-    background-color: #202020;
-    color: aliceblue;
-    letter-spacing: 2px;
-}
-.insta_heading div{
-    width: 200px;
-    height: 1px;
-    background-color:#202020;
-}
-.insta_heading h4{
-    font-family: var(--primary-font);
-    letter-spacing: 2px;
-    font-weight: 600;
 }

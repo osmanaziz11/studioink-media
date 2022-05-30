@@ -21,7 +21,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">FEATURES</a>
+                  <a href="">WEDDING</a>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <a href="">PACKAGES</a>
@@ -42,10 +42,14 @@ const Navbar = () => {
                   <a href="">SERVICES</a>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">PACKAGES</a>
+                  <Link href="/gallery">
+                    <a>GALLERY</a>
+                  </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">ABOUT</a>
+                  <Link href="/about">
+                    <a>ABOUT</a>
+                  </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <a href="">CONTACT</a>

@@ -1,0 +1,20 @@
+
+.insta_feed .ending_bar{
+    border-bottom: 1px solid var(--primary-heading-color);
+    width: 80%;
+}
+.insta_feed button{
+    background-color: #202020;
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+.insta_heading div{
+    width: 200px;
+    height: 1px;
+    background-color:#202020;
+}
+.insta_heading h4{
+    font-family: var(--primary-font);
+    letter-spacing: 2px;
+    font-weight: 600;
+}

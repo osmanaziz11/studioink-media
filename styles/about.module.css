@@ -1,0 +1,17 @@
+.icons{
+    font-size: 60px !important;
+    margin-top: 10px;
+    color: #202020 !important;
+}
+.icon_boxes{
+    cursor: pointer;
+}
+.icon_boxes:hover{
+    background-color: #202020 !important;
+    color: white !important;
+    transition: all 0.8s;
+}
+.icon_boxes:hover .icons{
+    color: white !important;
+    transition: all 0.3s;
+}
