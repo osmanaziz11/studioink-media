@@ -6,16 +6,19 @@ const Hero = () => {
     console.log();
     setCurr(e.target.attributes["1"].value);
   };
-  // let count;
-  // setInterval(() => {
-  //   if (curr >= 3) {
-  //     setCurr(1);
-  //   } else {
-  //     count = curr;
-  //     count++;
-  //     setCurr(count);
-  //   }
-  // }, 10000);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log(curr);
+      if (curr > 3 || curr == 3) {
+        console.log(`inside start condition`);
+        setCurr(1);
+      } else {
+        setCurr((curr) => curr + 1);
+        console.log(`After incre :${curr}`);
+      }
+    }, 3000);
+  }, []);
 
   return (
     <div

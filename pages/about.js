@@ -30,7 +30,7 @@ const About = () => {
             className={`${styles_global.horizontal_img} d-lg-block d-none`}
           />
         </div>
-        <div className={`col-md-6 p-md-4 p-5  ${styles_global.about_desc}`}>
+        <div className={`col-md-6 p-md-4 p-4  ${styles_global.about_desc}`}>
           <div
             className={` d-flex align-items-center w-100 ${styles_global.top_heading_container}`}
           >
@@ -45,7 +45,7 @@ const About = () => {
             vitae. Vivamus in metus ligula. Cras vitae dolor vel tellus laoreet
             mattis. Donec quis aliquet lorem, ac dapibus velit.
           </p>
-          <p className="me-sm-5">
+          <p className="me-sm-5 text-sm-start text-center">
             Mauris accumsan quis purus ut pretium. Suspendisse nunc magna,
             mollis vel pellentesque quis, consectetur eget neque. Phasellus
             posuere lacus lacus. Nunc consectetur, nulla at sagittis aliquam,
@@ -56,7 +56,7 @@ const About = () => {
         </div>
       </div>
       {/* Skills Section  */}
-      <div className={`row `} data-aos="fade-up">
+      <div className={`row `}>
         <div className={`col p-md-4 p-5  ${styles_global.about_desc}`}>
           <div
             className={` d-flex align-items-center justify-content-center my-5 w-100 ${styles_global.top_heading_container}`}
@@ -72,8 +72,8 @@ const About = () => {
                 className={`col-lg-3 col-sm-6 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
               >
                 <MdCameraFront className={styles.icons} />
+                <h5 className="text-center mt-2">Portrait Photography</h5>
                 <p className="text-center my-3">
-                  <h5 className="text-center mt-2">Portrait Photography</h5>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Saepe, commodi!
                 </p>
@@ -82,8 +82,8 @@ const About = () => {
                 className={`col-lg-3 col-sm-6 mx-4 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
               >
                 <GiLinkedRings className={styles.icons} />
+                <h5 className="text-center mt-2">Wedding Photography</h5>
                 <p className="text-center my-3">
-                  <h5 className="text-center mt-2">Wedding Photography</h5>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Saepe, commodi!
                 </p>
@@ -92,8 +92,8 @@ const About = () => {
                 className={`col-lg-3 col-sm-6 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
               >
                 <BsImage className={styles.icons} />
+                <h5 className="text-center mt-2">Landscape Photography</h5>
                 <p className="text-center my-3">
-                  <h5 className="text-center mt-2">Landscape Photography</h5>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Saepe, commodi!
                 </p>
@@ -104,8 +104,8 @@ const About = () => {
                 className={`col-3 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
               >
                 <MdCameraFront className={styles.icons} />
+                <h5 className="text-center mt-2">Portrait Photography</h5>
                 <p className="text-center my-3">
-                  <h5 className="text-center mt-2">Portrait Photography</h5>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Saepe, commodi!
                 </p>
@@ -114,8 +114,8 @@ const About = () => {
                 className={`col-lg-3 col-sm-6 bg-body mx-4 shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
               >
                 <GiLinkedRings className={styles.icons} />
+                <h5 className="text-center mt-2">Wedding Photography</h5>
                 <p className="text-center my-3">
-                  <h5 className="text-center mt-2">Wedding Photography</h5>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Saepe, commodi!
                 </p>
@@ -124,8 +124,8 @@ const About = () => {
                 className={`col-lg-3 col-sm-6 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
               >
                 <BsImage className={styles.icons} />
+                <h5 className="text-center mt-2">Landscape Photography</h5>
                 <p className="text-center my-3">
-                  <h5 className="text-center mt-2">Landscape Photography</h5>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Saepe, commodi!
                 </p>

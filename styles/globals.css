@@ -22,9 +22,12 @@ a:hover{
   --primary-font-color:#1A1717;
   --primary-heading-color:#303030;
 }
-
-
-
+._wPDyp{
+  flex-basis: 200px !important;
+}
+._2R-kh{
+  justify-content: center !important;
+}
 
 
 /* Gallery  */

@@ -1,4 +1,6 @@
 import styles from "../styles/instafeed.module.css";
+import InstagramFeed from "react-ig-feed";
+import "react-ig-feed/dist/index.css";
 const Instafeed = () => {
   return (
     <>
@@ -14,13 +16,11 @@ const Instafeed = () => {
           </div>
         </div>
         <div className="row my-4">
-          <div className="col p-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            commodi minima repellat distinctio eum necessitatibus ullam corporis
-            perferendis. Soluta ipsam sequi sapiente quasi, numquam cumque vero,
-            cum ea debitis ipsa quia eius consequuntur incidunt quis, inventore
-            earum accusamus tenetur ratione dolor libero? Ab eligendi aspernatur
-            ratione laboriosam hic enim voluptatibus!
+          <div className="col p-3" data-aos="fade-up" data-aos-duration="2000">
+            <InstagramFeed
+              token="IGQVJYbFFaVjhuMDhYVVktcUV3Q1k1ZAnlHVy1yOGotZAEl0NUNjaUZAjVHdoLS1GOEw0QzM3V1dfUTlGSnJxUmk1bXJtbVZAIaWstNkk3cWFjNlJNUnltYVY3N1RaYkVTSWlHVnJlMzhoUkp1V3dyeDZARRgZDZD"
+              counter="3"
+            />
           </div>
         </div>
         <div className="row">

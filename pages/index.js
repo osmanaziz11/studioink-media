@@ -1,9 +1,13 @@
 import Hero from "../components/Hero";
 import Instafeed from "../components/Instafeed";
-import styles from "../styles/home.module.css";
-import styles_global from "../styles/about_signature.module.css";
+import Layout from "../components/Layout";
+
 import { CgArrowLongLeft } from "react-icons/Cg";
 import { CgArrowLongRight } from "react-icons/Cg";
+
+import styles from "../styles/home.module.css";
+import styles_global from "../styles/about_signature.module.css";
+
 const Home = () => {
   const scroll_to_end = () => {
     var element = document.getElementById("sc");
@@ -14,8 +18,7 @@ const Home = () => {
     element.scrollTo(0, 0);
   };
   return (
-    <>
-      {/* Home Main Container  */}
+    <Layout title="Home">
       <div className="container-fluid">
         {/* slider Section  */}
         <div className="row">
@@ -271,7 +274,7 @@ const Home = () => {
         {/* Insta feed Section  */}
         <Instafeed></Instafeed>
       </div>
-    </>
+    </Layout>
   );
 };
 export default Home;
