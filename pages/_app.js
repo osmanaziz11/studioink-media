@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "aos/dist/aos.css";
 import "../styles/globals.css";
+import "../public/assects/css/style.css";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
