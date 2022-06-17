@@ -1,0 +1,33 @@
+
+
+.contactContainer h5
+{
+   font-family: 'BenchNine', sans-serif;
+   font-weight: 700;
+   color: #a7a7a7;
+   font-size: 20px;
+   letter-spacing: 5px;
+}
+.contactContainer h1
+{
+   font-family:"Playfair Display", sans-serif;
+   font-weight: bolder;
+   color: #222222;
+   font-size: 3rem;
+    letter-spacing: 5px;
+}
+.contactInfo h6{
+    font-family:"Playfair Display", sans-serif;
+     font-family:"Playfair Display", sans-serif;
+   font-weight: bolder;
+   color: #222222;
+   font-size: 1rem;
+    letter-spacing: 3px;
+}
+.contactContainer p{
+   color: #707070;
+   font-size: 17px;
+}
+.contactContainer button{
+   min-width: 200px
+}

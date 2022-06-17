@@ -52,7 +52,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">CONTACT</a>
+                  <Link href="/contact">
+                    <a>CONTACT</a>
+                  </Link>
                 </li>
               </ul>
               <HiMenuAlt3
