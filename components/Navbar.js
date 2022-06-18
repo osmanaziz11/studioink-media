@@ -24,7 +24,9 @@ const Navbar = () => {
                   <a href="">WEDDING</a>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">PACKAGES</a>
+                  <Link href="/packages">
+                    <a>PACKAGES</a>
+                  </Link>
                 </li>
               </ul>
             </div>

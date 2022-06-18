@@ -20,7 +20,8 @@ a:hover{
 }
 :root{
   --primary-font: 'Playfair Display',Georgia,"Times New Roman",serif;
-  --primary-font-color:#1A1717;
+  --primary-font-size: ;
+  --primary-font-color:#222222;
   --primary-heading-color:#303030;
 }
 ._wPDyp{
