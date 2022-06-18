@@ -1,141 +1,195 @@
-import styles_global from "../styles/about_signature.module.css";
-import styles from "../styles/about.module.css";
-
-import { MdCameraFront } from "react-icons/Md";
-import { BsImage } from "react-icons/Bs";
-import { BiChalkboard } from "react-icons/Bi";
-import { GiLinkedRings } from "react-icons/Gi";
-
+import Layout from "../components/Layout";
+import style from "../styles/about.module.css";
 const About = () => {
   return (
-    <div className="container-fluid">
-      {/* About Section  */}
-      <div
-        className={`row ${styles_global.about_section}`}
-        style={{ height: "auto !important" }}
-      >
-        <div className="col-md-6 d-lg-block d-flex justify-content-center align-items-center px-0 position-relative ">
-          <img
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            src="/about_photo_1.jpg"
-            alt=""
-            className={`${styles_global.vertical_img} shadow`}
-          />
-          <img
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            src="/about_photo-15.jpg"
-            alt=""
-            className={`${styles_global.horizontal_img} d-lg-block d-none`}
-          />
-        </div>
-        <div className={`col-md-6 p-md-4 p-4  ${styles_global.about_desc}`}>
-          <div
-            className={` d-flex align-items-center w-100 ${styles_global.top_heading_container}`}
-          >
-            <div className="d-inline-block"></div>
-            <h6 className="d-inline-block mt-1 mx-3">WORK WITH ME</h6>
-          </div>
-          <h1 className="my-4 pb-5 me-md-5 text-sm-start text-center">
-            Hi! My name is Jenna Doe, I’m a photographer.
-          </h1>
-          <p className="me-sm-5 pe-md-4 me-0 my-4 text-sm-start text-center">
-            Nunc pulvinar sagittis turpis, eleifend ultrices magna pharetra
-            vitae. Vivamus in metus ligula. Cras vitae dolor vel tellus laoreet
-            mattis. Donec quis aliquet lorem, ac dapibus velit.
-          </p>
-          <p className="me-sm-5 text-sm-start text-center">
-            Mauris accumsan quis purus ut pretium. Suspendisse nunc magna,
-            mollis vel pellentesque quis, consectetur eget neque. Phasellus
-            posuere lacus lacus. Nunc consectetur, nulla at sagittis aliquam,
-            velit diam molestie quam, nec congue orci odio vitae leo. Praesent
-            id purus neque. Integer ultricies, quam vel sagittis dictum, risus
-            felis placerat erat, ac volutpat orci lacus vel velit.
-          </p>
-        </div>
-      </div>
-      {/* Skills Section  */}
-      <div className={`row `}>
-        <div className={`col p-md-4 p-5  ${styles_global.about_desc}`}>
-          <div
-            className={` d-flex align-items-center justify-content-center my-5 w-100 ${styles_global.top_heading_container}`}
-          >
-            <div className="d-inline-block"></div>
-            <h6 className="d-inline-block mx-3">MY SKILLSET</h6>
-            <div className="d-inline-block"></div>
-          </div>
+    <Layout title="About Us">
+      {/* Main Container */}
+      <div className={`container-fluid  ${style.mainContainer}`}>
+        {/* Hero Section  */}
+        <div className="row">
+          <div className={`col ${style.heroSection} p-0`}>
+            <img src="/assects/img/about/hero.jpg" alt="" />
 
-          <div className="container">
-            <div className="row  p-3 d-flex justify-content-center align-items-center">
-              <div
-                className={`col-lg-3 col-sm-6 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
-              >
-                <MdCameraFront className={styles.icons} />
-                <h5 className="text-center mt-2">Portrait Photography</h5>
-                <p className="text-center my-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Saepe, commodi!
+            <div
+              className={`${style.transparent}  position-absolute start-0 top-0 w-100 h-100 `}
+            >
+              <h6 className="text-center">My Name is Jawad Pervez</h6>
+              <div className={`${style.desc} my-xl-4`} style={{ width: "40%" }}>
+                <h1 className="text-center">
+                  I am Landscape & Cityscape photographer
+                </h1>
+                <p className="text-center mt-sm-4">
+                  I love that feeling when I am in the right place. Than its
+                  time to stand still, watch and capture the right moment.
                 </p>
               </div>
               <div
-                className={`col-lg-3 col-sm-6 mx-4 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
+                className={`container ${style.numbers} d-none`}
+                style={{ width: "50%" }}
               >
-                <GiLinkedRings className={styles.icons} />
-                <h5 className="text-center mt-2">Wedding Photography</h5>
-                <p className="text-center my-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Saepe, commodi!
-                </p>
-              </div>
-              <div
-                className={`col-lg-3 col-sm-6 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
-              >
-                <BsImage className={styles.icons} />
-                <h5 className="text-center mt-2">Landscape Photography</h5>
-                <p className="text-center my-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Saepe, commodi!
-                </p>
+                <div className="row">
+                  <div className="col-4">
+                    {" "}
+                    <h3 className="text-center">5000+</h3>
+                    <p className="text-center">SOLD IMAGES ON STOCKS</p>
+                  </div>
+                  <div className="col-4">
+                    {" "}
+                    <h3 className="text-center">5000+</h3>
+                    <p className="text-center">SOLD IMAGES ON STOCKS</p>
+                  </div>
+                  <div className="col-4">
+                    {" "}
+                    <h3 className="text-center">5000+</h3>
+                    <p className="text-center">SOLD IMAGES ON STOCKS</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="row  p-3 d-flex justify-content-center align-items-center">
-              <div
-                className={`col-3 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
-              >
-                <MdCameraFront className={styles.icons} />
-                <h5 className="text-center mt-2">Portrait Photography</h5>
-                <p className="text-center my-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Saepe, commodi!
-                </p>
+          </div>
+        </div>
+        {/* Heading   */}
+        <div className="row my-5" data-aos="fade-up">
+          <div className="col">
+            <div className={`container-fluid ${style.aboutHeading}`}>
+              <div className="row">
+                <div className="col d-flex justify-content-center align-items-center">
+                  <h5 className="mx-3 my-2">- ABOUT ME -</h5>
+                </div>
               </div>
-              <div
-                className={`col-lg-3 col-sm-6 bg-body mx-4 shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
-              >
-                <GiLinkedRings className={styles.icons} />
-                <h5 className="text-center mt-2">Wedding Photography</h5>
-                <p className="text-center my-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Saepe, commodi!
-                </p>
+              <div className="row">
+                <div className="col">
+                  <h1 className={`text-center my-2`}>Story about me</h1>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+        {/* About Content  */}
+        <div className="row my-5" data-aos="fade-up">
+          <div className="col">
+            <div className="container">
+              {/* Short Biography  */}
+              <div className={`row ${style.biography}`}>
+                <div className="col px-md-5">
+                  <h6 className=" mx-md-5 text-sm-start text-center">
+                    Short Biography
+                  </h6>
+                  <p className="text-justify mx-md-5 text-sm-start text-center">
+                    I have been fascinated by the possibilities of photography
+                    since the beginning of college. I grew up at beautiful Orava
+                    region under Namestovo and after college at University of
+                    Zilina I started exploring world, spending most of my free
+                    time in the nature and beautiful cities around the world. My
+                    profession is a visual designer for 14 years – I deliver
+                    unique websites that reflects the originality of brands and
+                    delights users with focus on usability.
+                  </p>
+                </div>
+              </div>
+              {/* Photography */}
+              <div className={`row my-5 ${style.photography}`}>
+                <div className="col px-md-5">
+                  <h6 className=" mx-md-5 text-sm-start text-center">
+                    Photography
+                  </h6>
+                  <p className="text-justify mx-md-5 text-sm-start text-center">
+                    I love photography because I forget about everything that
+                    happens around me every day. I enjoy every moment when I can
+                    travel, be outside and discover the beauty of nature or
+                    interesting places. In my photography, I try to pay
+                    particular attention to good composition and light, which
+                    are the basis of good photography for me. I try to have the
+                    final photos as natural as possible with perfect technical
+                    quality.
+                  </p>
+                  <p className="text-justify mx-md-5 text-sm-start text-center">
+                    For the last 3 years I have been trying my luck in world
+                    competitions (International Photography Awards – WPE, 35
+                    Awards, IPA Photo Awards), where I recieved several awards,
+                    for which I am very grateful. Also, some of my photos have
+                    been published in book publications and one on the Lonely
+                    Planet website.
+                  </p>
+                </div>
+              </div>
+              {/* Numbers  */}
+              <div className={`row my-5 ${style.numbers}`} data-aos="fade-up">
+                <div className="col-md-4 col-12 px-md-5 d-flex flex-column justify-content-center align-items-center">
+                  <h1 className="text-center"></h1>
+                  <p
+                    className="text-center mt-3"
+                    style={{ maxWidth: "342.5px" }}
+                  >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dolor, suscipit.
+                  </p>
+                </div>
+                <div className="col-md-4 col-12 px-md-5 d-flex flex-column justify-content-center align-items-center">
+                  <h1 className="text-center"></h1>
+                  <p
+                    className="text-center mt-3"
+                    style={{ maxWidth: "342.5px" }}
+                  >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dolor, suscipit.
+                  </p>
+                </div>
+                <div className="col-md-4 col-12 px-md-5 d-flex flex-column justify-content-center align-items-center">
+                  <h1 className="text-center"></h1>
+                  <p
+                    className="text-center mt-3"
+                    style={{ maxWidth: "342.5px" }}
+                  >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dolor, suscipit.
+                  </p>
+                </div>
+              </div>
+              {/* Publication  */}
               <div
-                className={`col-lg-3 col-sm-6 bg-body shadow d-flex flex-column justify-content-center align-items-center ${styles.icon_boxes}`}
+                className={`row my-5 ${style.publication}`}
+                data-aos="fade-up"
               >
-                <BsImage className={styles.icons} />
-                <h5 className="text-center mt-2">Landscape Photography</h5>
-                <p className="text-center my-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Saepe, commodi!
-                </p>
+                <div className="col">
+                  <h6 className="text-center">MY TOP ACHIEVEMNET</h6>
+                  <h1 className="text-center">Publications & Awards</h1>
+                </div>
+              </div>
+              <div className={`row ${style.achievement}`} data-aos="fade-up">
+                <div className="col-md-4 col-12 px-md-3">
+                  <p className="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Et, praesentium facilis. A veritatis modi minus, hic
+                    reprehenderit quas tenetur neque?
+                  </p>
+                  <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
+                  <p className="text-center">- 2022 -</p>
+                </div>
+                <div className="col-md-4 col-12 px-md-3">
+                  <p className="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Et, praesentium facilis. A veritatis modi minus, hic
+                    reprehenderit quas tenetur neque?
+                  </p>
+                  <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
+                  <p className="text-center">- 2022 -</p>
+                </div>
+                <div className="col-md-4 col-12 px-md-3">
+                  <p className="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Et, praesentium facilis. A veritatis modi minus, hic
+                    reprehenderit quas tenetur neque?
+                  </p>
+                  <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
+                  <p className="text-center">- 2022 -</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Feature Project  */}
-    </div>
+    </Layout>
   );
 };
 export default About;

@@ -1,12 +1,12 @@
 // Import Components
 import Layout from "../components/Layout";
-
 // Import Css Modules
 import style from "../styles/contact.module.css";
 
 const Contact = () => {
   return (
     <Layout title="Contact Us">
+      {/* // Main Container  */}
       <div className={`container-fluid ${style.contactContainer} my-3`}>
         <div className="row">
           <div className="col d-flex justify-content-center align-items-center">
@@ -27,7 +27,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        {/* Main Container   */}
+        {/* Contact Form   */}
         <div className="row my-5">
           <div className="col">
             <div className="container">
@@ -71,6 +71,7 @@ const Contact = () => {
                   </form>
                 </div>
               </div>
+              {/* Information Container  */}
               <div className={`row my-4 ${style.contactInfo}`}>
                 <div className="col-xl-4 col-md-4 mb-5">
                   <h6 className="text-center">Our Address</h6>
@@ -94,6 +95,7 @@ const Contact = () => {
                   <p className="text-center mb-0">Anytown, CA 12345</p>
                 </div>
               </div>
+              {/* Map Container  */}
               <div className={`row ${style.mapContainer}`}>
                 <div className="col">
                   <iframe
