@@ -1,12 +1,16 @@
-.packageContainer h1{
-    font-family: var(--primary-font);
+.weddingContainer h1{
+font-family: 'Parisienne', cursive;
     font-weight: 700;
     font-size: 3rem;
     color: var(--primary-font-color);
     letter-spacing: 4px;
 }
+.headingContainer
+{
+    background-color: #ffffffe2;
+}
 .imgContainer{
-    height: 300px;
+    height: 400px;
     
 }
 .imgContainer img{

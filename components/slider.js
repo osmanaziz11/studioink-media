@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+// import css module
 import style from "../styles/Hero.module.css";
-const Hero = () => {
-  const [curr, setCurr] = useState(1);
-  const nextSlide = (e) => {
-    console.log();
-    setCurr(e.target.attributes["1"].value);
+
+const Slider = () => {
+  let input = useRef();
+  const nextSlide = (event) => {
+    console.log(`event : ${event}`);
+    console.log(`ref : ${input.current}`);
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      console.log(curr);
-      if (curr > 3 || curr == 3) {
-        console.log(`inside start condition`);
-        setCurr(1);
-      } else {
-        setCurr((curr) => curr + 1);
-        console.log(`After incre :${curr}`);
-      }
-    }, 3000);
-  }, []);
-
+  let curr = 1;
   return (
     <div
       className="container shadow p-0 position-relative"
@@ -27,7 +16,7 @@ const Hero = () => {
     >
       {/* slider navigation  */}
       <ul className="position-absolute z-1">
-        <li className="text-center" data_id="1" onClick={nextSlide}>
+        <li className="text-center" ref={input} value="1" onClick={nextSlide}>
           1
         </li>
         <li
@@ -37,7 +26,7 @@ const Hero = () => {
         >
           |
         </li>
-        <li className="text-center" data_id="2" onClick={nextSlide}>
+        <li className="text-center" value="2" onClick={nextSlide}>
           2
         </li>
         <li
@@ -47,7 +36,7 @@ const Hero = () => {
         >
           |
         </li>
-        <li className="text-center" data_id="3" onClick={nextSlide}>
+        <li className="text-center" value="3" onClick={nextSlide}>
           3
         </li>
         <li
@@ -142,4 +131,4 @@ const Hero = () => {
     </div>
   );
 };
-export default Hero;
+export default Slider;

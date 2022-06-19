@@ -1,31 +1,55 @@
-import { HiMenuAlt3 } from "react-icons/Hi";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 import style from "../styles/navbar.module.css";
 
+import { HiMenuAlt3 } from "react-icons/Hi";
+
 const Navbar = () => {
+  const router = useRouter();
   return (
     <>
       <nav>
         <div className="container-fluid shadow" id={style.navbar}>
-          <div className="row px-xl-5 py-5 px-3">
+          <div className="row px-xl-5 py-3 px-3">
             <div className="col-lg-5 col-0 pe-0  d-flex justify-content-center flex-column">
               <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center justify-content-end list-unstyled">
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/">
-                    <a>HOME</a>
+                    <a className={router.pathname == "/" ? "activeRoute" : ""}>
+                      HOME
+                    </a>
                   </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/portfolio">
-                    <a>PORTFOLIO</a>
+                    <a
+                      className={
+                        router.pathname == "/portfolio" ? "activeRoute" : ""
+                      }
+                    >
+                      PORTFOLIO
+                    </a>
                   </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a href="">WEDDING</a>
+                  <a
+                    className={
+                      router.pathname == "/wedding" ? "activeRoute" : ""
+                    }
+                  >
+                    WEDDING
+                  </a>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/packages">
-                    <a>PACKAGES</a>
+                    <a
+                      className={
+                        router.pathname == "/packages" ? "activeRoute" : ""
+                      }
+                    >
+                      PACKAGES
+                    </a>
                   </Link>
                 </li>
               </ul>
@@ -41,21 +65,45 @@ const Navbar = () => {
             <div className="col-lg-5 col-10  d-flex justify-content-center align-items-end flex-column">
               <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center justify-content-start list-unstyled">
                 <li className="mx-xl-5 mx-lg-4">
-                  <a href="">SERVICES</a>
+                  <a
+                    className={
+                      router.pathname == "/services" ? "activeRoute" : ""
+                    }
+                  >
+                    SERVICES
+                  </a>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/gallery">
-                    <a>GALLERY</a>
+                    <a
+                      className={
+                        router.pathname == "/gallery" ? "activeRoute" : ""
+                      }
+                    >
+                      GALLERY
+                    </a>
                   </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/about">
-                    <a>ABOUT</a>
+                    <a
+                      className={
+                        router.pathname == "/about" ? "activeRoute" : ""
+                      }
+                    >
+                      ABOUT
+                    </a>
                   </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/contact">
-                    <a>CONTACT</a>
+                    <a
+                      className={
+                        router.pathname == "/contact" ? "activeRoute" : ""
+                      }
+                    >
+                      CONTACT
+                    </a>
                   </Link>
                 </li>
               </ul>

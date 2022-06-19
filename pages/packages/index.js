@@ -1,18 +1,18 @@
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 // Import Css Module
-import styles from "../styles/packages.module.css";
+import styles from "../../styles/packages.module.css";
 
 const Packages = () => {
   return (
-    <Layout>
+    <Layout title="Packages">
       <div className={`container-fluid my-5 ${styles.packageContainer}`}>
         {/* Heading  */}
         <div className="row my-5">
           <div className="col d-flex flex-column justify-content-center align-items-center">
-            <h1 className="text-center">PRICING</h1>
+            <h1 className="text-center">Pricing Guide</h1>
             <div
               style={{
-                width: "40px",
+                width: "55px",
                 backgroundColor: "#222222",
                 height: "4px",
                 borderRadius: "10px",

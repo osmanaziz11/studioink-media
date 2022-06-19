@@ -2,5 +2,6 @@
 /* Navbar  */
 #navbar a{
 font-size: 13px;
- font-family: var(--primary-font);
+ /* font-family: var(--primary-font); */
+ font-family: "Tai Heritage Pro", serif;;
 }

@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 const Layout = ({ title, children }) => {
   return (
@@ -8,9 +6,7 @@ const Layout = ({ title, children }) => {
       <Head>
         <title>{`${title} - Studioink | Photography `}</title>
       </Head>
-      <Navbar />
       {children}
-      <Footer />
     </>
   );
 };

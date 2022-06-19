@@ -1,4 +1,4 @@
-import Hero from "../components/Hero";
+import Slider from "../components/slider";
 import Instafeed from "../components/Instafeed";
 import Layout from "../components/Layout";
 
@@ -19,11 +19,11 @@ const Home = () => {
   };
   return (
     <Layout title="Home">
-      <div className="container-fluid">
+      <div className="container-fluid mt-5">
         {/* slider Section  */}
         <div className="row">
           <div className="col">
-            <Hero></Hero>
+            <Slider></Slider>
           </div>
         </div>
 

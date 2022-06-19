@@ -18,6 +18,9 @@ a:hover{
   color: #999999 !important;
   transition: all 0.2s
 }
+.activeRoute{
+   color: #999999 !important;
+}
 :root{
   --primary-font: 'Playfair Display',Georgia,"Times New Roman",serif;
   --primary-font-size: ;
