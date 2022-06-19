@@ -138,3 +138,9 @@ opacity: 0;
    background-color: #100E0E;
    width: 400px;
 }
+
+/* About  */
+.about_desc p{
+    font-family:"Nunito Sans", sans-serif;
+    color: #555555 !important;
+}

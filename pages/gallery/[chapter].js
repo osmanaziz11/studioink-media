@@ -10,8 +10,8 @@ const Chapter = () => {
 
   return (
     <Layout title={`Gallery - Story of Egypt`}>
-      <div className={`container-fluid my-3 mb-5 ${style.galleryContainer}`}>
-        <div className="row">
+      <div className={style.galleryContainer}>
+        <div className="row  my-3 mb-5">
           <div className="col d-flex justify-content-center align-items-center">
             <h5 className="mx-3 my-2">- 2022 -</h5>
           </div>

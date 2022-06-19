@@ -5,7 +5,7 @@ import styles from "../../styles/packages.module.css";
 const Packages = () => {
   return (
     <Layout title="Packages">
-      <div className={`container-fluid my-5 ${styles.packageContainer}`}>
+      <div className={styles.packageContainer}>
         {/* Heading  */}
         <div className="row my-5">
           <div className="col d-flex flex-column justify-content-center align-items-center">

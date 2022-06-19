@@ -6,7 +6,9 @@ const Layout = ({ title, children }) => {
       <Head>
         <title>{`${title} - Studioink | Photography `}</title>
       </Head>
-      {children}
+      <div className="container-fluid " style={{ maxWidth: "1500px" }}>
+        {children}
+      </div>
     </>
   );
 };

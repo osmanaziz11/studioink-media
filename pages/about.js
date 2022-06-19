@@ -4,9 +4,9 @@ const About = () => {
   return (
     <Layout title="About Us">
       {/* Main Container */}
-      <div className={`container-fluid  ${style.mainContainer}`}>
+      <div className={style.mainContainer}>
         {/* Hero Section  */}
-        <div className="row">
+        <div className={`row my-5`}>
           <div className={`col ${style.heroSection} p-0`}>
             <img src="/assects/img/about/hero.jpg" alt="" />
 

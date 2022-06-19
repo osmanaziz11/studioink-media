@@ -33,13 +33,15 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
-                  <a
-                    className={
-                      router.pathname == "/wedding" ? "activeRoute" : ""
-                    }
-                  >
-                    WEDDING
-                  </a>
+                  <Link href="/wedding">
+                    <a
+                      className={
+                        router.pathname == "/wedding" ? "activeRoute" : ""
+                      }
+                    >
+                      WEDDING
+                    </a>
+                  </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/packages">
@@ -65,13 +67,15 @@ const Navbar = () => {
             <div className="col-lg-5 col-10  d-flex justify-content-center align-items-end flex-column">
               <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center justify-content-start list-unstyled">
                 <li className="mx-xl-5 mx-lg-4">
-                  <a
-                    className={
-                      router.pathname == "/services" ? "activeRoute" : ""
-                    }
-                  >
-                    SERVICES
-                  </a>
+                  <Link href="/services">
+                    <a
+                      className={
+                        router.pathname == "/services" ? "activeRoute" : ""
+                      }
+                    >
+                      SERVICES
+                    </a>
+                  </Link>
                 </li>
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/gallery">

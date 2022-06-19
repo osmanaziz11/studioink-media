@@ -7,8 +7,8 @@ import style from "../../styles/gallery.module.css";
 const Gallery = () => {
   return (
     <Layout title="Gallery">
-      <div className={`container-fluid ${style.galleryContainer} my-3`}>
-        <div className="row">
+      <div className={style.galleryContainer}>
+        <div className="row mt-5">
           <div className="col d-flex justify-content-center align-items-center">
             <div className={` ${style.bar}`}></div>
             <h5 className="mx-3 my-2">GALLERIES</h5>
