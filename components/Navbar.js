@@ -1,22 +1,39 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Rotate as Hamburger } from 'hamburger-react';
+import style from '../styles/navbar.module.css';
+import { navContext } from '../pages/_app';
+import { useContext } from 'react';
 
-import style from "../styles/navbar.module.css";
-
-import { HiMenuAlt3 } from "react-icons/Hi";
+import { useEffect } from 'react';
+import Image from 'next/image';
 
 const Navbar = () => {
   const router = useRouter();
+  const navToggle = useContext(navContext);
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', () => {
+      if (navToggle.NavStatus) {
+        console.log('object');
+        document.getElementsByClassName('hamburger-react')[0].click();
+      }
+    });
+  }, [router.events]);
+
   return (
     <>
-      <nav>
+      <nav
+        className="position-sticky top-0 bg-white"
+        style={{ zIndex: '99999999999' }}
+      >
         <div className="container-fluid shadow" id={style.navbar}>
           <div className="row px-xl-5 py-3 px-3">
             <div className="col-lg-5 col-0 pe-0  d-flex justify-content-center flex-column">
-              <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center justify-content-end list-unstyled">
+              <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center nav_1 justify-content-end list-unstyled">
                 <li className="me-xl-5 me-lg-4">
                   <Link href="/">
-                    <a className={router.pathname == "/" ? "activeRoute" : ""}>
+                    <a className={router.pathname == '/' ? 'activeRoute' : ''}>
                       HOME
                     </a>
                   </Link>
@@ -25,7 +42,7 @@ const Navbar = () => {
                   <Link href="/portfolio">
                     <a
                       className={
-                        router.pathname == "/portfolio" ? "activeRoute" : ""
+                        router.pathname == '/portfolio' ? 'activeRoute' : ''
                       }
                     >
                       PORTFOLIO
@@ -36,7 +53,7 @@ const Navbar = () => {
                   <Link href="/wedding">
                     <a
                       className={
-                        router.pathname == "/wedding" ? "activeRoute" : ""
+                        router.pathname == '/wedding' ? 'activeRoute' : ''
                       }
                     >
                       WEDDING
@@ -47,7 +64,7 @@ const Navbar = () => {
                   <Link href="/packages">
                     <a
                       className={
-                        router.pathname == "/packages" ? "activeRoute" : ""
+                        router.pathname == '/packages' ? 'activeRoute' : ''
                       }
                     >
                       PACKAGES
@@ -56,24 +73,22 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-2 col-2 px-0 pe-2  d-flex justify-content-start">
-              <img
-                className="w-100 "
-                src="/Logo.png"
-                alt=""
-                style={{ minWidth: "150px" }}
-              />
+            <div
+              className="col-lg-2 col-2 px-0 pe-2 position-relative  d-flex justify-content-start"
+              style={{ height: '60px' }}
+            >
+              <img src="/Logo.png" alt="" />
             </div>
-            <div className="col-lg-5 col-10  d-flex justify-content-center align-items-end flex-column">
-              <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center justify-content-start list-unstyled">
+            <div className="col-lg-5 col-10 pe-lg-1 pe-0   d-flex justify-content-center align-items-end flex-column">
+              <ul className="w-100 m-0 p-0 d-lg-flex d-none justify-content-xl-center nav_2 justify-content-start list-unstyled">
                 <li className="mx-xl-5 mx-lg-4">
-                  <Link href="/services">
+                  <Link href="/offerings">
                     <a
                       className={
-                        router.pathname == "/services" ? "activeRoute" : ""
+                        router.pathname == '/offerings' ? 'activeRoute' : ''
                       }
                     >
-                      SERVICES
+                      OFFERINGS
                     </a>
                   </Link>
                 </li>
@@ -81,7 +96,7 @@ const Navbar = () => {
                   <Link href="/gallery">
                     <a
                       className={
-                        router.pathname == "/gallery" ? "activeRoute" : ""
+                        router.pathname == '/gallery' ? 'activeRoute' : ''
                       }
                     >
                       GALLERY
@@ -92,7 +107,7 @@ const Navbar = () => {
                   <Link href="/about">
                     <a
                       className={
-                        router.pathname == "/about" ? "activeRoute" : ""
+                        router.pathname == '/about' ? 'activeRoute' : ''
                       }
                     >
                       ABOUT
@@ -103,7 +118,7 @@ const Navbar = () => {
                   <Link href="/contact">
                     <a
                       className={
-                        router.pathname == "/contact" ? "activeRoute" : ""
+                        router.pathname == '/contact' ? 'activeRoute' : ''
                       }
                     >
                       CONTACT
@@ -111,10 +126,15 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-              <HiMenuAlt3
-                size={30}
-                className="position-absolute d-lg-none d-block"
-              ></HiMenuAlt3>
+
+              <span id="ab" className="position-absolute d-lg-none d-block">
+                <Hamburger
+                  id="hamburger"
+                  size={30}
+                  distance="sm"
+                  onToggle={() => navToggle.setNavStatus(!navToggle.NavStatus)}
+                ></Hamburger>
+              </span>
             </div>
           </div>
         </div>

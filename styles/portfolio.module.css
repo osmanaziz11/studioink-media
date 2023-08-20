@@ -1,0 +1,37 @@
+/* Portfolio Page Css  */
+.slider ul li {
+    min-width: 400px;
+    max-width: 500px;
+  }
+  .slider {
+    height: 500px;
+  }
+  .transition {
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.582);
+  }
+  .transition div {
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+  }
+  .transition p {
+    max-width: 600px;
+    color: #fff;
+    text-align: center;
+  }
+  .slider ul {
+    scroll-behavior: smooth;
+  }
+  /* Portoflio Content  */
+  .imgBoxes {
+    border: 1px solid;
+    min-width: 265px;
+    max-width: 90%;
+    height: 500px;
+    background-color: red;
+  }
+  .potraitBox {
+    max-width: 400px;
+  }
+  

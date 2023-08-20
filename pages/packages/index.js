@@ -1,180 +1,117 @@
-import Layout from "../../components/Layout";
-// Import Css Module
-import styles from "../../styles/packages.module.css";
+// custom components
+import Layout from '../../components/Layout';
+
+// Json Objects
+import PackagesData from '../../website-data/packages/packages';
+
+// Css Module
+import styles from '../../styles/packages.module.css';
+
+import { BiPound } from 'react-icons/bi';
+import Image from 'next/image';
 
 const Packages = () => {
   return (
     <Layout title="Packages">
       <div className={styles.packageContainer}>
         {/* Heading  */}
-        <div className="row my-5">
+        <div className="row mt-5">
+          <div className="col">
+            <h5 className="text-center globalPgeSubHeading">- 2022 -</h5>
+          </div>
+        </div>
+        <div className="row mb-5">
           <div className="col d-flex flex-column justify-content-center align-items-center">
-            <h1 className="text-center">Pricing Guide</h1>
-            <div
+            <h1 className="text-center globalPgeHeading">Pricing Guide</h1>
+
+            <p
               style={{
-                width: "55px",
-                backgroundColor: "#222222",
-                height: "4px",
-                borderRadius: "10px",
+                minWidth: '270px',
+                maxWidth: '35%',
               }}
-              className="mt-3"
-            ></div>
+              className="text-center mt-3"
+            >
+              Discount are offered on multiple days bookings, Select any option
+              of your choice and contact me to get your Quote.
+            </p>
           </div>
         </div>
 
-        {/* Grid 1  */}
+        {/* Packages  */}
         <div className="row">
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <img
-              src="/assects/img/packages/1.jpg"
-              alt=""
-              className="position-absolute top-0 start-0"
-            />
+          {PackagesData &&
+            PackagesData.map((pkg, index) => {
+              return (
+                <div className={`col-md-6 mb-4 `} key={index}>
+                  <div
+                    className={`${styles.imgContainer} position-relative p-0`}
+                  >
+                    <img
+                      src={pkg.thumbnail}
+                      alt="Image"
+                      className="position-absolute top-0 start-0"
+                    />
 
-            <div className={`${styles.transparent}`}>
-              <h1>BRONZE</h1>
-            </div>
-          </div>
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <div className="rates w-100 h-100 flex-column justify-content-center align-items-center d-md-none d-flex">
-              <h6 className="text-center">$500</h6>
-              <h4 className="text-center">- INCLUDES -</h4>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-            </div>
-            <img
-              src="/assects/img/packages/1.jpg"
-              alt=""
-              className="position-absolute top-0 start-0 d-md-block d-none"
-            />
+                    <div className={`${styles.transparent} p-sm-4 p-2`}>
+                      <div>
+                        <h4 className="text-center">{pkg.title}</h4>
+                      </div>
+                    </div>
+                  </div>
 
-            <div className={`${styles.transparent} d-md-flex d-none`}>
-              <h1>BRONZE</h1>
-            </div>
-          </div>
+                  <div className="rates w-100 flex-column justify-content-center align-items-center d-flex">
+                    <h3 className="text-center globalPgeHeading">
+                      <BiPound />
+                      {`${pkg.price}`}
+                    </h3>
+                    <h6 className="text-center globalPgeSubHeading ">
+                      - INCLUDES -
+                    </h6>
+                    <p className="px-md-5 px-sm-3 px-2 text-center">
+                      {pkg.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
         </div>
-        {/* Pricing  */}
-        <div className="row my-4">
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <div className="rates w-100 h-100 flex-column justify-content d-md-flex d-none position-absolute top-0 start-0">
-              <h6 className="text-center">$500</h6>
-              <h4 className="text-center">- INCLUDES -</h4>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-            </div>
-            <img
-              src="/assects/img/packages/1.jpg"
-              alt=""
-              className="position-absolute top-0 start-0 d-md-none d-block"
-            />
+        {/* Discount Window  */}
+        {/* <div className="row my-5 p-0">
+          <div className={`col p-0`}>
+            <div className="container-fluid">
+              <div className="row p-0">
+                <div className={`col-12 p-0 ${styles.discountWindow}`}>
+                  <div
+                    className={`${styles.imgContainer} h-100 position-relative p-0`}
+                  >
+                    <Image
+                      src="https://res.cloudinary.com/ozecloud/image/upload/v1657084424/studioink-media-assects/images/home/1_tbmh2s.jpg"
+                      alt="image"
+                      layout="fill"
+                      placeholder="blur"
+                      blurDataURL="https://res.cloudinary.com/ozecloud/image/upload/e_blur:438/v1657113931/studioink-media-assects/images/home/136737052_3027897840776769_9158931925401818452_n_esosbr.jpg"
+                      objectFit="cover"
+                      objectPosition="center"
+                    ></Image>
 
-            <div className={`${styles.transparent} d-md-none d-flex`}>
-              <h1>BRONZE</h1>
+                    <div className={`${styles.transparent} p-4`}>
+                      <div>
+                        <h2
+                          className="text-center globalPgeHeading position-absolute"
+                          style={{ maxWidth: '700px' }}
+                        >
+                          Discount are offered on multiple days bookings, Select
+                          any option of your choice and contact me to get your
+                          Quote.
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <div className="rates w-100 h-100 flex-column justify-content-md-start justify-content-center align-items-center d-flex position-absolute top-0 start-0">
-              <h6 className="text-center">$500</h6>
-              <h4 className="text-center">- INCLUDES -</h4>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-            </div>
-          </div>
-        </div>
-
-        {/* Grid 2 */}
-        <div className="row">
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <img
-              src="/assects/img/packages/1.jpg"
-              alt=""
-              className="position-absolute top-0 start-0"
-            />
-
-            <div className={`${styles.transparent}`}>
-              <h1>BRONZE</h1>
-            </div>
-          </div>
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <div className="rates w-100 h-100 flex-column justify-content-center align-items-center d-md-none d-flex">
-              <h6 className="text-center">$500</h6>
-              <h4 className="text-center">- INCLUDES -</h4>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-            </div>
-            <img
-              src="/assects/img/packages/1.jpg"
-              alt=""
-              className="position-absolute top-0 start-0 d-md-block d-none"
-            />
-
-            <div className={`${styles.transparent} d-md-flex d-none`}>
-              <h1>BRONZE</h1>
-            </div>
-          </div>
-        </div>
-        {/* Pricing  */}
-        <div className="row my-4">
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <div className="rates w-100 h-100 flex-column justify-content d-md-flex d-none position-absolute top-0 start-0">
-              <h6 className="text-center">$500</h6>
-              <h4 className="text-center">- INCLUDES -</h4>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-            </div>
-            <img
-              src="/assects/img/packages/1.jpg"
-              alt=""
-              className="position-absolute top-0 start-0 d-md-none d-block"
-            />
-
-            <div className={`${styles.transparent} d-md-none d-flex`}>
-              <h1>BRONZE</h1>
-            </div>
-          </div>
-          <div
-            className={`col-md-6 ${styles.imgContainer} position-relative p-0`}
-          >
-            <div className="rates w-100 h-100 flex-column justify-content-md-start justify-content-center align-items-center d-flex position-absolute top-0 start-0">
-              <h6 className="text-center">$500</h6>
-              <h4 className="text-center">- INCLUDES -</h4>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-              <h6 className="text-center">Lorem ipsum dolor sit amet.</h6>
-            </div>
-          </div>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

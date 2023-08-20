@@ -2,38 +2,113 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   /* background-image: url("../public/white__bg.jpg"); */
 }
 * {
   box-sizing: border-box;
+  outline: none !important;
 }
-a{
+a {
   text-decoration: none;
   color: var(--primary-font-color);
   letter-spacing: 3px;
+}
+.Layout-container::-webkit-scrollbar {
+  display: none;
+}
+/* About Global Css */
+/* Animation  */
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
 
+.numbers p {
+  color: #555555;
+  font-family: 'Nunito Sans', sans-serif !important;
+  letter-spacing: 2px;
 }
-a:hover{
+.numbers h1 {
+  font-family: 'Tai Heritage Pro', serif;
+  animation-fill-mode: forwards;
+  font-size: 2.5rem;
+  counter-reset: num var(--num);
+}
+.activeNumber1 {
+  animation: counter1 2s linear 1 alternate;
+}
+.activeNumber2 {
+  animation: counter2 2s linear 1 alternate;
+}
+.activeNumber3 {
+  animation: counter3 2s linear 1 alternate;
+}
+.numbers h1::after {
+  content: counter(num) '+';
+}
+@keyframes counter1 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 200;
+  }
+}
+@keyframes counter2 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 300;
+  }
+}
+@keyframes counter3 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 500;
+  }
+}
+
+a:hover {
   color: #999999 !important;
-  transition: all 0.2s
+  transition: all 0.2s;
 }
-.activeRoute{
-   color: #999999 !important;
+.activeRoute {
+  color: #999999 !important;
 }
-:root{
-  --primary-font: 'Playfair Display',Georgia,"Times New Roman",serif;
+:root {
+  --primary-font: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --secondary-font: 'Nunito Sans', sans-serif;
   --primary-font-size: ;
-  --primary-font-color:#222222;
-  --primary-heading-color:#303030;
+  --primary-font-color: #222222;
+  --primary-heading-color: #303030;
 }
-._wPDyp{
+
+/* Page Heading  */
+.globalPgeHeading {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: bolder;
+  color: #222222;
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+.globalPgeSubHeading {
+  font-family: 'BenchNine', sans-serif;
+  font-weight: 700;
+  color: #a7a7a7;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+._wPDyp {
   flex-basis: 200px !important;
 }
-._2R-kh{
+._2R-kh {
   justify-content: center !important;
 }
-
 
 /* Gallery  */
 
@@ -49,7 +124,7 @@ a:hover{
   z-index: 1;
 }
 .full .content {
-  background-color: rgba(0,0,0,0.75) !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
   height: 100%;
   width: 100%;
   display: grid;
@@ -181,4 +256,162 @@ a:hover{
     max-width: 100%;
     transform: rotate(0deg);
   }
+}
+
+/* Testominals  */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.snip1574 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 250px;
+  max-width: 310px;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.snip1574 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.snip1574 figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+}
+.snip1574 figcaption p {
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  opacity: 0.95;
+}
+.transitionEffect {
+  z-index: 3;
+  background: #00000066;
+  display: flex;
+}
+.snip1574 figcaption:before {
+  font-family: 'FontAwesome';
+  content: '\201C';
+  position: absolute;
+  font-size: 170px;
+  opacity: 0.45;
+  font-style: normal;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -30px;
+  left: 50%;
+}
+
+.snip1574 blockquote {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.snip1574 h3 {
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 2px;
+  margin: 3px 0;
+}
+
+.snip1574 h5 {
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 1px;
+}
+
+/* Instafeed Image Hover Effect  */
+.hoverEffect:hover {
+  transform: rotate(0deg) !important;
+}
+
+/* Navbar Menu Media Query for more than 1500 width  */
+@media screen and (min-width: 1500px) {
+  .nav_1 {
+    justify-content: end !important;
+  }
+  .nav_2 {
+    justify-content: start !important;
+  }
+}
+
+.styles-module_whatsappButton__IWx9V {
+  width: 50px !important;
+  height: 50px !important;
+  align-items: center;
+  background-color: #25d366;
+  border-radius: 50%;
+  bottom: 2rem;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.styles-module_whatsappChatBox__P75uz {
+  display: none !important;
+}
+
+.btn-whatsapp-pulse {
+  background: #25d366;
+  color: white;
+  position: fixed;
+  cursor: pointer;
+  font-size: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  border-radius: 50%;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: 3333;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.btn-whatsapp-pulse-border {
+  bottom: 2rem;
+  right: 2rem;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
 }

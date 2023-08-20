@@ -1,0 +1,55 @@
+.mainContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .numbering {
+    font-family: 'Raleway', sans-serif;
+    color: #474a49;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  
+  .serviceTitle {
+    font-family: var(--primary-font);
+    color: #474a49;
+    letter-spacing: 1px;
+  }
+  .serviceDesc {
+    font-family: var(--secondary-font);
+    color: #474a49;
+    text-align: justify;
+  }
+  
+  .horizontalBar {
+    width: 80%;
+    height: 1px;
+    background-color: #474a494f;
+  }
+  
+  .potraitBox {
+    min-width: 70%;
+    height: 500px;
+  }
+  .landscapeBox {
+    max-width: 80%;
+    height: 300px;
+  }
+  .Link {
+    font-family: var(--secondary-font);
+    color: #474a49;
+    letter-spacing: 1px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  /* ONE CONTAINER  */
+  .OneContainer .serviceDesc {
+    /* max-width: 75%; */
+  }
+  /* TWO CONTAINER  */
+  .twoContainer .serviceDesc {
+    max-width: 100%;
+  }
+  
+  /* Media Queries  */

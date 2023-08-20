@@ -1,0 +1,22 @@
+.main__container {
+    background-color: rgb(21 20 20 / 98%);
+    z-index: 999999999999;
+    width: 100%;
+    height: calc(100vh - 77.39px);
+    transition: all 0.5s;
+    right: 0px !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .main__container a {
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(255 255 255);
+    top: 77.39px;
+    transition: all 0.5s;
+    right: -900px;
+  
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1.5px;
+  }
+  
